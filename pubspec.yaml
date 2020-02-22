@@ -1,7 +1,7 @@
 name: rsaa_crypt
-description: Enable you to quickly implement RSAA file and text encryption in your flutter app. 
+description: Enables you to quickly implement RSAA file and text encryption in your flutter app.
 version: 0.0.1
-homepage: https://github.com
+homepage: https://github.com/Robetron/rsaa_crypt
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
