@@ -2,12 +2,14 @@ import 'dart:convert';
 
 import 'package:basic_utils/basic_utils.dart';
 import 'package:crypto/crypto.dart';
+import 'package:logger/logger.dart';
 
 import 'constants.dart';
 import 'util.dart';
 
 class RSAA {
   static final Util util = Util();
+  static final Logger log = Logger();
   List<List<int>> ruleBox = List.generate(NUM_RULES, (i) => List(NUM_RULES));
 
   String _hashKey(String inputKey) {
@@ -16,6 +18,8 @@ class RSAA {
   }
 
   void ruleGen(String inputKey) {
+    log.i('Rule Generation Started');
+
     List<List<num>> tempBox = List.generate(BOX_SIZE, (i) => List(BOX_SIZE));
     String key = _hashKey(inputKey);
 
@@ -59,12 +63,16 @@ class RSAA {
         if (ruleBox[line][pos] == -1) ruleBox[line][pos] = pos;
       }
     }
+
+    log.i('Rule Generation Completed');
   }
 
   void encryptRSAA(List<String> hexInput) {
     int splitFactor = (hexInput.length < SPLIT_SETTING)
         ? 1
         : (hexInput.length ~/ SPLIT_SETTING);
+
+    log.i('Encryption Started');
 
     // Iterations Loop
     for (var itr = 0; itr < ITERATIONS; itr++) {
@@ -84,13 +92,19 @@ class RSAA {
       }
       hexInput.removeRange(0, splitFactor);
       hexInput.addAll(tempInput);
+
+      log.i('Iteration $itr Complete');
     }
+
+    log.i('Encryption Completed');
   }
 
   void decryptRSAA(List<String> hexInput) {
     int splitFactor = (hexInput.length < SPLIT_SETTING)
         ? 1
         : (hexInput.length ~/ SPLIT_SETTING);
+
+    log.i('Decryption Started');
 
     // Iterations Loop
     for (var itr = ITERATIONS - 1; itr >= 0; itr--) {
@@ -111,6 +125,10 @@ class RSAA {
             ruleBox[itr][util.hexToInt(word1)].toRadixString(HEX) +
                 ruleBox[itr][util.hexToInt(word2)].toRadixString(HEX);
       }
+
+      log.i('Iteration $itr Complete');
     }
+
+    log.i('Decryption Completed');
   }
 }

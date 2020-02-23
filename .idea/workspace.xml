@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab547672-aa08-48ab-baaa-a169c77b850c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/file-decrypted.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/file-encrypted.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/file-original.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rsaa.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rsaa.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rsaa_crypt.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rsaa_crypt.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/util.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/util.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/rsaa_crypt_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/rsaa_crypt_test.dart" afterDir="false" />
     </list>
@@ -27,12 +33,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rsaa_crypt.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+            <state>
+              <caret selection-end-line="1" />
               <folding>
                 <element signature="e#21#38#0" expanded="true" />
-                <element signature="e#4901#5375#0" />
-                <element signature="e#5445#5918#0" />
               </folding>
             </state>
           </provider>
@@ -41,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rsaa.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1258">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="-873">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -54,16 +58,16 @@
         <entry file="file://$PROJECT_DIR$/lib/constants.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/util.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1218">
-              <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+            <state relative-caret-position="33">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="97" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -71,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="110">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -83,10 +87,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/rsaa_crypt_test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="546">
+              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
               <folding>
-                <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#0#17#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,6 +110,7 @@
       <find>16</find>
       <find>new</find>
       <find>consts.</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>SIZE</replace>
@@ -118,11 +123,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/constants.dart" />
-        <option value="$PROJECT_DIR$/lib/util.dart" />
-        <option value="$PROJECT_DIR$/lib/rsaa.dart" />
         <option value="$PROJECT_DIR$/lib/rsaa_crypt.dart" />
-        <option value="$PROJECT_DIR$/test/rsaa_crypt_test.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/test/rsaa_crypt_test.dart" />
+        <option value="$PROJECT_DIR$/lib/rsaa.dart" />
+        <option value="$PROJECT_DIR$/lib/util.dart" />
       </list>
     </option>
   </component>
@@ -144,11 +150,6 @@
               <item name="rsaa_crypt" type="b2602c69:ProjectViewProjectNode" />
               <item name="rsaa_crypt" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="rsaa_crypt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rsaa_crypt" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -159,8 +160,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -174,27 +184,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.Text Encryption and Decryption">
-    <configuration name="rsaa_crypt.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/rsaa_crypt.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Text Encryption and Decryption" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="Text Encryption and Decryption" />
+  <component name="RunManager" selected="Flutter Test.tests in rsaa_crypt_test.dart">
+    <configuration name="compare" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="compare" />
       <option name="testFile" value="$PROJECT_DIR$/test/rsaa_crypt_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="values should match" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="values should match" />
+    <configuration name="encryption and decryption" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="encryption and decryption" />
+      <option name="testFile" value="$PROJECT_DIR$/test/rsaa_crypt_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="file" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="file" />
+      <option name="testFile" value="$PROJECT_DIR$/test/rsaa_crypt_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in rsaa_crypt_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/rsaa_crypt_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="text" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="text" />
       <option name="testFile" value="$PROJECT_DIR$/test/rsaa_crypt_test.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter Test.Text Encryption and Decryption" />
-        <item itemvalue="Flutter Test.values should match" />
-        <item itemvalue="Dart Command Line App.rsaa_crypt.dart" />
+        <item itemvalue="Flutter Test.tests in rsaa_crypt_test.dart" />
+        <item itemvalue="Flutter Test.compare" />
+        <item itemvalue="Flutter Test.text" />
+        <item itemvalue="Flutter Test.file" />
+        <item itemvalue="Flutter Test.encryption and decryption" />
       </list>
     </recent_temporary>
   </component>
@@ -212,77 +233,66 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="values_should_match - 2020.02.22 at 17h 44m 00s.xml">
-      <configuration name="values should match" configurationId="FlutterTestConfigType" />
+    <history-entry file="encryption_and_decryption - 2020.02.23 at 16h 23m 59s.xml">
+      <configuration name="encryption and decryption" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="values_should_match - 2020.02.22 at 17h 44m 56s.xml">
-      <configuration name="values should match" configurationId="FlutterTestConfigType" />
+    <history-entry file="file - 2020.02.23 at 16h 25m 17s.xml">
+      <configuration name="file" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="values_should_match - 2020.02.22 at 17h 46m 34s.xml">
-      <configuration name="values should match" configurationId="FlutterTestConfigType" />
+    <history-entry file="text - 2020.02.23 at 16h 30m 46s.xml">
+      <configuration name="text" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="values_should_match - 2020.02.22 at 17h 48m 24s.xml">
-      <configuration name="values should match" configurationId="FlutterTestConfigType" />
+    <history-entry file="text - 2020.02.23 at 16h 31m 11s.xml">
+      <configuration name="text" configurationId="FlutterTestConfigType" />
     </history-entry>
-    <history-entry file="Text_Encryption_and_Decryption - 2020.02.22 at 18h 03m 48s.xml">
-      <configuration name="Text Encryption and Decryption" configurationId="FlutterTestConfigType" />
+    <history-entry file="text - 2020.02.23 at 16h 31m 31s.xml">
+      <configuration name="text" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="text - 2020.02.23 at 16h 32m 38s.xml">
+      <configuration name="text" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="compare - 2020.02.23 at 16h 34m 42s.xml">
+      <configuration name="compare" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_rsaa_crypt_test_dart - 2020.02.23 at 16h 36m 07s.xml">
+      <configuration name="tests in rsaa_crypt_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_rsaa_crypt_test_dart - 2020.02.23 at 16h 36m 22s.xml">
+      <configuration name="tests in rsaa_crypt_test.dart" configurationId="FlutterTestConfigType" />
+    </history-entry>
+    <history-entry file="tests_in_rsaa_crypt_test_dart - 2020.02.23 at 16h 36m 56s.xml">
+      <configuration name="tests in rsaa_crypt_test.dart" configurationId="FlutterTestConfigType" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Resources Explorer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2552795" />
-      <window_info anchor="bottom" id="Dart Analysis" weight="0.32886723" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Run" weight="0.330076" />
-      <window_info anchor="bottom" id="Debug" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.29207385" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Flutter Outline" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Flutter Performance" />
+      <window_info id="Resources Explorer" order="0" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Structure" order="5" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2552795" />
+      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.43213898" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info anchor="bottom" id="Debug" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32899022" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.29207385" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.32790446" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Flutter Inspector" order="1" />
+      <window_info anchor="right" id="Flutter Outline" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Flutter Performance" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/util.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/constants.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rsaa.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1258">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -293,32 +303,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/rsaa_crypt_test.dart">
+    <entry file="file://$PROJECT_DIR$/assets/file-encrypted.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/file-decrypted.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="462">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rsaa_crypt.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        <state>
+          <caret selection-end-line="1" />
           <folding>
             <element signature="e#21#38#0" expanded="true" />
-            <element signature="e#4901#5375#0" />
-            <element signature="e#5445#5918#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/rsaa_crypt_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/constants.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rsaa.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-873">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="110">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/util.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="97" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

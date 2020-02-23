@@ -32,30 +32,30 @@ class RSAACrypt {
         .bytesToText(util.hexListToBytes(hexInput)); // Write Text from bytes
   }
 
-  void encryptFile(String key, String inputPath, String outputPath) {
+  Future<File> encryptFile(String key, File inputFile, String outputPath) {
     List<int> byteOutput = List<int>();
 
     rsaa.ruleGen(key); // Generate Cellular Automata Rules
-    Uint8List bytes = util.readFile(inputPath); // Read File as bytes
+    Uint8List bytes = util.readFile(inputFile); // Read File as bytes
 
     List<String> hexInput =
         util.bytesToHexList(bytes); // Convert bytes to Hex List
     rsaa.encryptRSAA(hexInput); // Perform RSAA Decryption
     byteOutput = util.hexListToBytes(hexInput); // Convert Hex List to bytes
 
-    File(outputPath).writeAsBytes(byteOutput).then((bytes) {}); // Write File
+    return util.writeFile(outputPath, byteOutput); // Write File
   }
 
-  void decryptFile(String key, String inputPath, String outputPath) {
+  Future<File> decryptFile(String key, File inputFile, String outputPath) {
     List<int> byteOutput = List<int>();
 
     rsaa.ruleGen(key); // Generate Cellular Automata Rules
-    Uint8List bytes = util.readFile(inputPath); // Read File as bytes
+    Uint8List bytes = util.readFile(inputFile); // Read File as bytes
     List<String> hexInput =
         util.bytesToHexList(bytes); // Convert bytes to Hex List
     rsaa.decryptRSAA(hexInput); // Perform RSAA Decryption
     byteOutput = util.hexListToBytes(hexInput); // Convert Hex List to bytes
 
-    File(outputPath).writeAsBytes(byteOutput).then((bytes) {}); // Write File
+    return util.writeFile(outputPath, byteOutput); // Write File
   }
 }

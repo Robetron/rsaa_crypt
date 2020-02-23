@@ -1,5 +1,9 @@
+library rsaa_crypt;
+
 import 'dart:io';
 import 'dart:typed_data';
+
+import 'package:logger/logger.dart';
 
 class Util {
   int hexToInt(String hex) {
@@ -75,26 +79,29 @@ class Util {
     return stringBuffer.toString();
   }
 
-  void printFileSize(Uint8List bytes) {
+  void getFileSize(Uint8List bytes) {
+    Logger log = Logger();
     int fileSize = 0, fileLength = bytes.length;
     if (fileLength >= 1000000000) {
       fileSize = fileLength ~/ 1000000000;
-      print('File Size: ${fileSize} GB');
+      log.i('File Size: $fileSize GB');
     } else if (fileLength >= 1000000) {
       fileSize = fileLength ~/ 1000000;
-      print('File Size: ${fileSize} MB');
+      log.i('File Size: $fileSize MB');
     } else if (fileLength >= 1000) {
       fileSize = fileLength ~/ 1000;
-      print('File Size: ${fileSize} KB');
+      log.i('File Size: $fileSize KB');
     } else {
-      print('File Size: ${fileSize} B');
+      log.i('File Size: $fileSize B');
     }
   }
 
-  Uint8List readFile(String path) {
-    Uint8List bytes = File(path).readAsBytesSync();
-    printFileSize(bytes);
-    return bytes;
+  Uint8List readFile(File file) {
+    return file.readAsBytesSync();
+  }
+
+  Future<File> writeFile(String outputPath, List<int> bytes) {
+    return File(outputPath).writeAsBytes(bytes);
   }
 
   List<String> bytesToHexList(Uint8List bytes) {

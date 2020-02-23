@@ -21,3 +21,5 @@ doc/api/
 *.js.map
 .idea/vcs.xml
 .idea/workspace.xml
+test/.DS_Store
+.idea/libraries/Dart_Packages.xml
