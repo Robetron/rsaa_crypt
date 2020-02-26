@@ -7,20 +7,49 @@ import 'package:rsaa_crypt/rsaa_crypt.dart';
 void main() {
   final Logger log = Logger();
 
-  group('text', () {
-    String key = '🐻🎌';
-    String message = 'Hello! Cześć! 🐻🎌 你好! ご挨拶！Привет! ℌ𝔢𝔩𝔩𝔬!';
-    String cipher;
-    String decipher;
+  group('message-text', () {
+    String key = '🐻🎌',
+        message = 'Hello! Cześć! 🐻🎌 你好! ご挨拶！Привет! ℌ𝔢𝔩𝔩𝔬!',
+        cipher,
+        decipher;
 
     test('encrypt', () {
-      cipher = RSAACrypt().encryptText(key, message);
-      log.i('Cipher Text: $cipher');
+      RSAACrypt().encryptText(key, message).then((value) {
+        cipher = Util().bytesToText(value);
+      });
+      log.d('Cipher Text: $cipher');
     });
 
     test('decrypt', () {
-      decipher = RSAACrypt().decryptText(key, cipher);
-      log.i('Deciphered Text: $decipher');
+      RSAACrypt().decryptText(key, Util().textToBytes(cipher)).then((value) {
+        decipher = value;
+      });
+      log.d('Deciphered Text: $decipher');
+    });
+
+    test('compare', () {
+      expect(message, decipher);
+    });
+  });
+
+  group('message-base64', () {
+    String key = '🐻🎌',
+        message = 'Hello! Cześć! 🐻🎌 你好! ご挨拶！Привет! ℌ𝔢𝔩𝔩𝔬!',
+        cipher,
+        decipher;
+
+    test('encrypt', () {
+      RSAACrypt().encryptText(key, message).then((value) {
+        cipher = Util().bytesToBase64(value);
+      });
+      log.d('Cipher Text: $cipher');
+    });
+
+    test('decrypt', () {
+      RSAACrypt().decryptText(key, Util().base64ToBytes(cipher)).then((value) {
+        decipher = value;
+      });
+      log.d('Deciphered Text: $decipher');
     });
 
     test('compare', () {
@@ -29,17 +58,21 @@ void main() {
   });
 
   group('file', () {
-    String key = '🐻🎌';
-    String inputFilePath = 'assets/file-original.svg';
-    String encryptedFilePath = 'assets/file-encrypted.svg';
-    String decryptedFilePath = 'assets/file-decrypted.svg';
+    String key = '🐻🎌',
+        inputFilePath = 'assets/file-original.svg',
+        encryptedFilePath = 'assets/file-encrypted.svg',
+        decryptedFilePath = 'assets/file-decrypted.svg';
 
     test('encrypt', () {
-      RSAACrypt().encryptFile(key, File(inputFilePath), encryptedFilePath);
+      RSAACrypt().encryptFile(key, File(inputFilePath)).then((value) {
+        Util().writeFile(encryptedFilePath, value);
+      });
     });
 
     test('decrypt', () {
-      RSAACrypt().decryptFile(key, File(encryptedFilePath), decryptedFilePath);
+      RSAACrypt().decryptFile(key, File(encryptedFilePath)).then((value) {
+        Util().writeFile(decryptedFilePath, value);
+      });
     });
 
     test('compare', () {

@@ -5,7 +5,7 @@ import 'package:crypto/crypto.dart';
 import 'package:logger/logger.dart';
 
 import 'constants.dart';
-import 'util.dart';
+import 'rsaa_crypt.dart';
 
 class RSAA {
   static final Util util = Util();
@@ -18,7 +18,7 @@ class RSAA {
   }
 
   void ruleGen(String inputKey) {
-    log.i('Rule Generation Started');
+    log.d('Rule Generation Started');
 
     List<List<num>> tempBox = List.generate(BOX_SIZE, (i) => List(BOX_SIZE));
     String key = _hashKey(inputKey);
@@ -64,7 +64,7 @@ class RSAA {
       }
     }
 
-    log.i('Rule Generation Completed');
+    log.d('Rule Generation Completed');
   }
 
   void encryptRSAA(List<String> hexInput) {
@@ -72,7 +72,7 @@ class RSAA {
         ? 1
         : (hexInput.length ~/ SPLIT_SETTING);
 
-    log.i('Encryption Started');
+    log.d('Encryption Started');
 
     // Iterations Loop
     for (var itr = 0; itr < ITERATIONS; itr++) {
@@ -93,10 +93,10 @@ class RSAA {
       hexInput.removeRange(0, splitFactor);
       hexInput.addAll(tempInput);
 
-      log.i('Iteration $itr Complete');
+      log.d('Iteration $itr Complete');
     }
 
-    log.i('Encryption Completed');
+    log.d('Encryption Completed');
   }
 
   void decryptRSAA(List<String> hexInput) {
@@ -104,7 +104,7 @@ class RSAA {
         ? 1
         : (hexInput.length ~/ SPLIT_SETTING);
 
-    log.i('Decryption Started');
+    log.d('Decryption Started');
 
     // Iterations Loop
     for (var itr = ITERATIONS - 1; itr >= 0; itr--) {
@@ -126,9 +126,9 @@ class RSAA {
                 ruleBox[itr][util.hexToInt(word2)].toRadixString(HEX);
       }
 
-      log.i('Iteration $itr Complete');
+      log.d('Iteration $itr Complete');
     }
 
-    log.i('Decryption Completed');
+    log.d('Decryption Completed');
   }
 }
