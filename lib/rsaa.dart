@@ -92,8 +92,6 @@ class RSAA {
       }
       hexInput.removeRange(0, splitFactor);
       hexInput.addAll(tempInput);
-
-      log.d('Iteration $itr Complete');
     }
 
     log.d('Encryption Completed');
@@ -125,8 +123,6 @@ class RSAA {
             ruleBox[itr][util.hexToInt(word1)].toRadixString(HEX) +
                 ruleBox[itr][util.hexToInt(word2)].toRadixString(HEX);
       }
-
-      log.d('Iteration $itr Complete');
     }
 
     log.d('Decryption Completed');
