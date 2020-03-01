@@ -37,13 +37,13 @@ class RSAACrypt {
   Future<List<int>> encryptFile(String key, File inputFile) async {
     Uint8List bytes = util.readFile(inputFile); // Read File as bytes
 
-    return await decryptBytes(key, bytes); // Convert Hex to bytes and return
+    return await encryptBytes(key, bytes); // Convert Hex to bytes and return
   }
 
   Future<List<int>> decryptFile(String key, File inputFile) async {
     Uint8List bytes = util.readFile(inputFile); // Read File as bytes
 
-    return await encryptBytes(key, bytes);
+    return await decryptBytes(key, bytes);
   }
 
   Future<List<int>> encryptBytes(String key, Uint8List bytes) async {
