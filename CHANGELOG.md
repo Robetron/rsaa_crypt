@@ -1,3 +1,8 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.2] - 1st March 2020.
 
-* TODO: Describe initial release.
+* Bug Fixes
+
+
+## [0.0.1] - 26th February 2020.
+
+* Added code for Text and File Encryption and Decryption.
